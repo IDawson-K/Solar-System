@@ -548,6 +548,7 @@ body {
 }
 
 .cercle1 {
+  position: absolute;
   border: 2px solid rgba(60, 60, 60, 0.9);
   border-radius: 50%;
   width: 140px;
@@ -555,6 +556,7 @@ body {
 }
 
 .cercle2 {
+  position: absolute;
   border: 2px solid rgba(60, 60, 60, 0.9);
   border-radius: 50%;
   width: 260px;
@@ -562,6 +564,7 @@ body {
 }
 
 .cercle3 {
+  position: absolute;
   border: 2px solid rgba(60, 60, 60, 0.9);
   border-radius: 50%;
   width: 380px;
@@ -569,6 +572,7 @@ body {
 }
 
 .cercle4 {
+  position: absolute;
   border: 2px solid rgba(60, 60, 60, 0.9);
   border-radius: 50%;
   width: 500px;
@@ -576,6 +580,7 @@ body {
 }
 
 .cercle5 {
+  position: absolute;
   border: 2px solid rgba(60, 60, 60, 0.9);
   border-radius: 50%;
   width: 640px;
@@ -583,6 +588,7 @@ body {
 }
 
 .cercle6 {
+  position: absolute;
   border: 2px solid rgba(60, 60, 60, 0.9);
   border-radius: 50%;
   width: 780px;
@@ -590,6 +596,7 @@ body {
 }
 
 .cercle7 {
+  position: absolute;
   border: 2px solid rgba(60, 60, 60, 0.9);
   border-radius: 50%;
   width: 920px;
