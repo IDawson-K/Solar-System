@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Dawson Kramer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLE/style.css">
+    <title>Solar System</title>
+</head>
+<body>
+<!-- ─── Overlay ─────────────────────────────────────────────────────────── -->
+<div id="overlay" class="overlay"></div>
+
+<!-- ─── Video ───────────────────────────────────────────────────────────── -->
+<video id="bgvid" loop class="bg" src="VIDEO/bgvidspace2.mp4"></video>
+
+<!-- ─── Big Bang ────────────────────────────────────────────────────────── -->
+<video id="bigbang" class="bg" src="VIDEO/bigbang.mp4"></video>
+
+<!-- ─── Audio ───────────────────────────────────────────────────────────── -->
+<audio id="music" loop src="AUDIO/yt5s.com - We Are All Astronauts - Ether (128 kbps).mp3"></audio>
+<audio id="clicksound" src="AUDIO/button.mp3"></audio>
+<audio id="alarm" src="AUDIO/alarm.mp3"></audio>
+<audio id="explosion" src="AUDIO/explosion.mp3"></audio>
+
+<!-- ─── Ecran Titre ─────────────────────────────────────────────────────── -->
+<div class="flexbox titre">
+    <h1 class="landing">A TRIP TO THE SOLAR SYSTEM</h1>
+</div>
+
+<button onclick="begin()" id="start" class="btn click">
+    start the journey
+</button>
+
+<video loop id="rocket" class="fusee landing2" src="VIDEO/rocket.mp4"></video>
+
+<div id="tag" class="tag flexbox">
+    MADE BY DAWSON KRAMER
+</div>
+
+<!-- ─── All ─────────────────────────────────────────────────────────────── -->
+<div class="all">
+    <!-- ─── Trajectoire Des Astres ──────────────────────────────────────────── -->
+    <div class="flexbox fs">
+        <div class="cercle1 OnOff"></div>
+    </div>
+
+    <div class="flexbox fs">
+        <div class="cercle2 OnOff"></div>
+    </div>
+
+    <div class="flexbox fs">
+        <div class="cercle3 OnOff"></div>
+    </div>
+
+    <div class="flexbox fs">
+        <div class="cercle4 OnOff"></div>
+    </div>
+
+    <div class="flexbox fs">
+        <div class="cercle5 OnOff"></div>
+    </div>
+
+    <div class="flexbox fs">
+        <div class="cercle6 OnOff"></div>
+    </div>
+
+    <div class="flexbox fs">
+        <div class="cercle7 OnOff"></div>
+    </div>
+    
+    <!-- ─── Systeme Solaire ─────────────────────────────────────────────────── -->
+    <div class="flexbox fs">
+        <img onmouseover="soleilup()" onmouseleave="soleildown()" onclick="soleil()" id="soleil" class="system click" src="IMG/soleil.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="mercureup()" onmouseleave="mercuredown()" onclick="mercure()" id="mercure" class="system planet click" src="IMG/mercure.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="venusup()" onmouseleave="venusdown()" onclick="venus()" id="venus" class="system planet click" src="IMG/venus.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="terreup()" onmouseleave="terredown()" onclick="terre()" id="terre" class="system planet click" src="IMG/terre.png" alt="">
+    </div>
+    <div class="system flexbox fs">
+        <img onmouseover="marsup()" onmouseleave="marsdown()" onclick="mars()" id="mars" class="system planet click" src="IMG/mars.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="jupiterup()" onmouseleave="jupiterdown()" onclick="jupiter()" id="jupiter" class="system planet click" src="IMG/jupiter.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="saturneup()" onmouseleave="saturnedown()" onclick="saturne()" id="saturne" class="system planet click" src="IMG/saturne.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="uranusup()" onmouseleave="uranusdown()" onclick="uranus()" id="uranus" class="system planet click" src="IMG/uranus.png" alt="">
+    </div>
+</div>
+
+<!-- ─── Nom Des astres ──────────────────────────────────────────────────── -->
+<div class="astre soleil">
+    THE SUN
+</div>
+<div class="astre mercure">
+    MERCURY
+</div>
+<div class="astre venus">
+    VENUS
+</div>
+<div class="astre terre">
+    EARTH
+</div>
+<div class="astre mars">
+    MARS
+</div>
+<div class="astre jupiter">
+    JUPITER
+</div>
+<div class="astre saturne">
+    SATURN
+</div>
+<div class="astre uranus">
+    URANUS
+</div>
+
+<!-- ─── Fiches Descriptives Des Astres ──────────────────────────────────── -->
+<div class="fs bgnoir">
+    <div onclick="croix()" id="croix" class="m2">❌</div>
+</div>
+
+<!-- ─── Bouton Rouge ────────────────────────────────────────────────────── -->
+<div onclick="explosion()" class="btnred flexbox">
+    <img src="IMG/le-crane.png" alt="">
+</div>
+
+<!-- ─── Compte À Rebours ────────────────────────────────────────────────── -->
+<div class="destruct cache" id="destruct">SELF DESTRUCT IN :</div>
+<div class="time cache" id="kontarebour"></div>
+
+<!-- ─── Alien ───────────────────────────────────────────────────────────── -->
+<div class="bulle">
+    Do you know the Konami Code ?
+</div>
+<img id="alien" class="alien" src="IMG/alien.png" alt="Alien">
+
+
+<script src="JS/script.js"></script>
+</body>
+</html>
