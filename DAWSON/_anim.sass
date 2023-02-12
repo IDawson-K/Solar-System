@@ -1,8 +1,24 @@
-// Depop
+// Motion Blur
+@for $i from 1 through 20
+    .n#{$i}
+        transition-delay: 0ms + 3ms * $i
+    
+// Pop & Depop
+.pop
+    opacity: 1 !important
+
+    h2, video
+        transform: scale(1) !important
+        letter-spacing: 20px
+        font-size: 2rem
+
 .depop
-    transition: 1s
+    transition: 0.6s
     opacity: 0
     pointer-events: none
+
+.depop2
+    opacity: 0
     
 // Hovers
 .hvr1

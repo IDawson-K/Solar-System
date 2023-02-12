@@ -24,10 +24,103 @@
   flex-grow: 1;
 }
 
+.n1 {
+  transition-delay: 3ms;
+}
+
+.n2 {
+  transition-delay: 6ms;
+}
+
+.n3 {
+  transition-delay: 9ms;
+}
+
+.n4 {
+  transition-delay: 12ms;
+}
+
+.n5 {
+  transition-delay: 15ms;
+}
+
+.n6 {
+  transition-delay: 18ms;
+}
+
+.n7 {
+  transition-delay: 21ms;
+}
+
+.n8 {
+  transition-delay: 24ms;
+}
+
+.n9 {
+  transition-delay: 27ms;
+}
+
+.n10 {
+  transition-delay: 30ms;
+}
+
+.n11 {
+  transition-delay: 33ms;
+}
+
+.n12 {
+  transition-delay: 36ms;
+}
+
+.n13 {
+  transition-delay: 39ms;
+}
+
+.n14 {
+  transition-delay: 42ms;
+}
+
+.n15 {
+  transition-delay: 45ms;
+}
+
+.n16 {
+  transition-delay: 48ms;
+}
+
+.n17 {
+  transition-delay: 51ms;
+}
+
+.n18 {
+  transition-delay: 54ms;
+}
+
+.n19 {
+  transition-delay: 57ms;
+}
+
+.n20 {
+  transition-delay: 60ms;
+}
+
+.pop {
+  opacity: 1 !important;
+}
+.pop h2, .pop video {
+  transform: scale(1) !important;
+  letter-spacing: 20px;
+  font-size: 2rem;
+}
+
 .depop {
-  transition: 1s;
+  transition: 0.6s;
   opacity: 0;
   pointer-events: none;
+}
+
+.depop2 {
+  opacity: 0;
 }
 
 .hvr1 {
@@ -58,17 +151,6 @@
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-@-webkit-keyframes landing {
-  0% {
-    margin-top: 100px;
-    opacity: 0;
-  }
-  100% {
-    margin-top: 0px;
-    opacity: 1;
-  }
-}
-
 @keyframes landing {
   0% {
     margin-top: 100px;
@@ -81,38 +163,32 @@
 }
 .landing {
   opacity: 0;
-  -webkit-animation: landing 1s ease-in-out 0s forwards;
-          animation: landing 1s ease-in-out 0s forwards;
+  animation: landing 1s ease-in-out 0s forwards;
 }
 
 .landing2 {
   opacity: 0;
-  -webkit-animation: landing 1s ease-in-out 0.2s forwards;
-          animation: landing 1s ease-in-out 0.2s forwards;
+  animation: landing 1s ease-in-out 0.2s forwards;
 }
 
 .landing3 {
   opacity: 0;
-  -webkit-animation: landing 1s ease-in-out 0.4s forwards;
-          animation: landing 1s ease-in-out 0.4s forwards;
+  animation: landing 1s ease-in-out 0.4s forwards;
 }
 
 .landing4 {
   opacity: 0;
-  -webkit-animation: landing 1s ease-in-out 0.6s forwards;
-          animation: landing 1s ease-in-out 0.6s forwards;
+  animation: landing 1s ease-in-out 0.6s forwards;
 }
 
 .landing5 {
   opacity: 0;
-  -webkit-animation: landing 1s ease-in-out 0.8s forwards;
-          animation: landing 1s ease-in-out 0.8s forwards;
+  animation: landing 1s ease-in-out 0.8s forwards;
 }
 
 .landing6 {
   opacity: 0;
-  -webkit-animation: landing 1s ease-in-out 1s forwards;
-          animation: landing 1s ease-in-out 1s forwards;
+  animation: landing 1s ease-in-out 1s forwards;
 }
 
 .p1 {
@@ -208,7 +284,6 @@
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 9;
@@ -250,35 +325,33 @@
   height: 100vh;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: black;
-  border: 4px solid white;
-  border-radius: 2rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: royalblue;
-  border: 2px solid white;
+.milieu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 * {
-  font-family: Orbitron;
+  font-family: Orbitron, sans-serif;
 }
 
 body {
   overflow: hidden;
 }
 
-.m2 {
+#all {
+  transform-style: preserve-3d;
+  transition: 1s;
+  margin-top: 50vh;
+}
+
+#croix {
+  filter: saturate(0) brightness(9) sepia(5) hue-rotate(130deg);
+  position: absolute;
   font-size: 2rem;
+  top: 0px;
+  left: 0px;
 }
 
 .titre {
@@ -292,7 +365,7 @@ body {
 
 .titreafter {
   transform: translateY(-80px);
-  font-size: 1.4rem;
+  font-size: 1rem;
   transition: 0.8s;
 }
 
@@ -382,10 +455,56 @@ body {
   opacity: 0;
   pointer-events: none;
 }
+.bgnoir h2 {
+  font-size: 4rem;
+  letter-spacing: 30px;
+  margin-top: 7rem;
+  text-align: center;
+  color: rgb(163, 253, 255);
+  text-shadow: 0 0 10px cyan;
+  transition: 0.5s;
+}
+
+.details {
+  text-align: center;
+  transition: opacity 3s, transform 3s;
+  opacity: 0;
+  transition-delay: 0.5s;
+}
+.details .text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: rgb(163, 253, 255);
+  width: 75vw;
+  margin: auto;
+  transition: opacity 2s;
+  text-shadow: 0 0 10px cyan;
+}
+.details .mid {
+  padding-bottom: 3rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
+.details h2 {
+  transition: 2s;
+  transform: scale(0.1);
+}
+.details video {
+  filter: brightness(2) sepia(2) hue-rotate(130deg);
+  mix-blend-mode: lighten;
+  border-radius: 50%;
+  margin-top: 2rem;
+  width: 500px;
+  transition: opacity 2s, transform 2s;
+  transform: scale(0.1);
+  pointer-events: auto;
+  cursor: pointer;
+}
 
 .black {
   opacity: 1;
-  background: rgb(0, 0, 0);
+  background: rgb(1, 1, 1);
 }
 
 .planet {
@@ -436,6 +555,197 @@ body {
   box-shadow: 0 0 60px 20px rgb(255, 0, 0);
 }
 
+#rond {
+  transition: 0.6s;
+}
+
+.switchbtn {
+  transform: translateX(18px);
+}
+
+.cube3D {
+  transform: rotateX(45deg) rotateZ(45deg) translateZ(10px);
+}
+
+.cube {
+  position: absolute;
+  top: 90px;
+  width: 80px;
+  height: 80px;
+  transform-style: preserve-3d;
+  transition: 0.6s;
+  margin-left: 28px;
+}
+.cube div {
+  height: 30px;
+  width: 30px;
+  border: solid 2px white;
+  box-shadow: 0 0 30px white;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+}
+.cube .face2 {
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+.cube .face3 {
+  transform-origin: right;
+  transform: rotateY(-90deg);
+}
+.cube .face4 {
+  transform-origin: left;
+  transform: translateZ(-30px);
+}
+
+#btn3D {
+  top: 34px;
+  position: absolute;
+  width: 80px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+#btn3D:hover #rond {
+  fill: cyan;
+}
+
+.dimension2 {
+  transform: scale(0.8);
+  color: #3C3949;
+  position: absolute;
+  top: 45px;
+  left: 75px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.dimension3 {
+  transform: scale(0.8);
+  color: #3C3949;
+  position: absolute;
+  top: 45px;
+  left: 38px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.all3D {
+  perspective: 900px;
+  transform: rotateX(75deg);
+}
+.all3D .flexbox, .all3D .astre {
+  transform-style: preserve-3d;
+}
+.all3D #soleil {
+  transform: rotateX(90deg);
+}
+.all3D #mercure {
+  transform: translateY(70px) rotateX(90deg);
+}
+.all3D #venus {
+  transform: translateY(130px) rotateX(90deg);
+}
+.all3D #terre {
+  transform: translateY(190px) rotateX(90deg);
+}
+.all3D #mars {
+  transform: translateY(250px) rotateX(90deg);
+}
+.all3D #jupiter {
+  transform: translateY(320px) rotateX(90deg);
+}
+.all3D #saturne {
+  transform: translateY(390px) rotateX(90deg);
+}
+.all3D #uranus {
+  transform: translateY(460px) rotateX(90deg);
+}
+
+#mercure3D {
+  transform: translateY(70px);
+  height: 70px;
+  animation: mercure 6s linear infinite, mercure3D 6s linear infinite;
+  transition: 0.4s;
+  filter: contrast(1.3) drop-shadow(0 0 5px white);
+}
+#mercure3D:hover {
+  height: 100px;
+  filter: contrast(1.3) drop-shadow(0 0 20px white) !important;
+}
+
+#venus3D {
+  transform: translateY(130px);
+  height: 70px;
+  animation: venus 12s linear infinite, venus3D 12s linear infinite;
+  transition: 0.4s;
+  filter: contrast(1.3) drop-shadow(0 0 5px brown);
+}
+#venus3D:hover {
+  height: 100px;
+  filter: contrast(1.3) drop-shadow(0 0 20px brown) !important;
+}
+
+#terre3D {
+  transform: translateY(190px);
+  height: 70px;
+  animation: terre 24s linear infinite, terre3D 24s linear infinite;
+  transition: 0.4s;
+  filter: contrast(1.3) drop-shadow(0 0 5px white);
+}
+#terre3D:hover {
+  height: 100px;
+  filter: contrast(1.3) drop-shadow(0 0 20px white) !important;
+}
+
+#mars3D {
+  transform: translateY(250px);
+  height: 70px;
+  animation: mars 36s linear infinite, mars3D 36s linear infinite;
+  transition: 0.4s;
+  filter: contrast(1.3) drop-shadow(0 0 5px red);
+}
+#mars3D:hover {
+  height: 100px;
+  filter: contrast(1.3) drop-shadow(0 0 20px red) !important;
+}
+
+#jupiter3D {
+  transform: translateY(320px);
+  height: 70px;
+  animation: jupiter 42s linear infinite, jupiter3D 42s linear infinite;
+  transition: 0.4s;
+  filter: contrast(1.3) drop-shadow(0 0 5px rgb(130, 165, 0));
+}
+#jupiter3D:hover {
+  height: 100px;
+  filter: contrast(1.3) drop-shadow(0 0 20px rgb(130, 165, 40)) !important;
+}
+
+#saturne3D {
+  transform: translateY(390px);
+  height: 70px;
+  animation: saturne 53s linear infinite, saturne3D 53s linear infinite;
+  transition: 0.4s;
+  filter: contrast(1.3) drop-shadow(0 0 5px yellow);
+}
+#saturne3D:hover {
+  height: 100px;
+  filter: contrast(1.3) drop-shadow(0 0 20px yellow) !important;
+}
+
+#uranus3D {
+  transform: translateY(460px);
+  height: 70px;
+  animation: uranus 72s linear infinite, uranus3D 72s linear infinite;
+  transition: 0.4s;
+  filter: contrast(1.3) drop-shadow(0 0 5px rgb(0, 151, 121));
+}
+#uranus3D:hover {
+  height: 100px;
+  filter: contrast(1.3) drop-shadow(0 0 20px rgb(0, 151, 121)) !important;
+}
+
 #soleil {
   position: absolute;
   cursor: pointer;
@@ -459,8 +769,7 @@ body {
 #mercure {
   transform: translateY(70px);
   height: 70px;
-  -webkit-animation: mercure 6s linear infinite;
-          animation: mercure 6s linear infinite;
+  animation: mercure 6s linear infinite;
   transition: 0.4s;
   filter: contrast(1.3) drop-shadow(0 0 5px white);
 }
@@ -472,8 +781,7 @@ body {
 #venus {
   transform: translateY(130px);
   height: 70px;
-  -webkit-animation: venus 12s linear infinite;
-          animation: venus 12s linear infinite;
+  animation: venus 12s linear infinite;
   transition: 0.4s;
   filter: contrast(1.3) drop-shadow(0 0 5px brown);
 }
@@ -485,8 +793,7 @@ body {
 #terre {
   transform: translateY(190px);
   height: 70px;
-  -webkit-animation: terre 24s linear infinite;
-          animation: terre 24s linear infinite;
+  animation: terre 24s linear infinite;
   transition: 0.4s;
   filter: contrast(1.3) drop-shadow(0 0 5px white);
 }
@@ -498,8 +805,7 @@ body {
 #mars {
   transform: translateY(250px);
   height: 70px;
-  -webkit-animation: mars 36s linear infinite;
-          animation: mars 36s linear infinite;
+  animation: mars 36s linear infinite;
   transition: 0.4s;
   filter: contrast(1.3) drop-shadow(0 0 5px red);
 }
@@ -511,8 +817,7 @@ body {
 #jupiter {
   transform: translateY(320px);
   height: 70px;
-  -webkit-animation: jupiter 42s linear infinite;
-          animation: jupiter 42s linear infinite;
+  animation: jupiter 42s linear infinite;
   transition: 0.4s;
   filter: contrast(1.3) drop-shadow(0 0 5px rgb(130, 165, 0));
 }
@@ -524,8 +829,7 @@ body {
 #saturne {
   transform: translateY(390px);
   height: 70px;
-  -webkit-animation: saturne 53s linear infinite;
-          animation: saturne 53s linear infinite;
+  animation: saturne 53s linear infinite;
   transition: 0.4s;
   filter: contrast(1.3) drop-shadow(0 0 5px yellow);
 }
@@ -537,8 +841,7 @@ body {
 #uranus {
   transform: translateY(460px);
   height: 70px;
-  -webkit-animation: uranus 72s linear infinite;
-          animation: uranus 72s linear infinite;
+  animation: uranus 72s linear infinite;
   transition: 0.4s;
   filter: contrast(1.3) drop-shadow(0 0 5px rgb(0, 151, 121));
 }
@@ -642,8 +945,7 @@ body {
   font-size: 2rem;
   font-weight: 900;
   color: red;
-  -webkit-animation: destruct 1s infinite;
-          animation: destruct 1s infinite;
+  animation: destruct 1s infinite;
   transition: 0.4s;
 }
 
@@ -656,8 +958,7 @@ body {
   font-size: 2rem;
   font-weight: 900;
   color: red;
-  -webkit-animation: destruct 0.5s infinite;
-          animation: destruct 0.5s infinite;
+  animation: destruct 0.5s infinite;
   transition: 0.4s;
 }
 
@@ -665,24 +966,24 @@ body {
   transform: translateY(-200px);
 }
 
-@-webkit-keyframes mercure {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
+.code {
+  left: 20px;
+  bottom: -100px;
+  position: absolute;
+  width: auto;
+  padding: 0.3rem;
+  background: white;
+  border-radius: 4px;
+  text-align: center;
+  transition: 1s;
+  transition-delay: 1.8s;
+}
+
+.codepop {
+  bottom: 20px;
 }
 
 @keyframes mercure {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
-@-webkit-keyframes venus {
   0% {
     rotate: 0deg;
   }
@@ -698,23 +999,7 @@ body {
     rotate: 360deg;
   }
 }
-@-webkit-keyframes terre {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
 @keyframes terre {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
-@-webkit-keyframes mars {
   0% {
     rotate: 0deg;
   }
@@ -730,23 +1015,7 @@ body {
     rotate: 360deg;
   }
 }
-@-webkit-keyframes jupiter {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
 @keyframes jupiter {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
-@-webkit-keyframes saturne {
   0% {
     rotate: 0deg;
   }
@@ -762,14 +1031,6 @@ body {
     rotate: 360deg;
   }
 }
-@-webkit-keyframes uranus {
-  0% {
-    rotate: 0deg;
-  }
-  100% {
-    rotate: 360deg;
-  }
-}
 @keyframes uranus {
   0% {
     rotate: 0deg;
@@ -778,7 +1039,7 @@ body {
     rotate: 360deg;
   }
 }
-@-webkit-keyframes destruct {
+@keyframes destruct {
   0% {
     opacity: 0;
   }
@@ -786,11 +1047,59 @@ body {
     opacity: 1;
   }
 }
-@keyframes destruct {
+@keyframes mercure3D {
   0% {
-    opacity: 0;
+    transform: translateY(70px) rotateX(90deg) rotateY(0deg);
   }
   100% {
-    opacity: 1;
+    transform: translateY(70px) rotateX(90deg) rotateY(-360deg);
+  }
+}
+@keyframes venus3D {
+  0% {
+    transform: translateY(130px) rotateX(90deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateY(130px) rotateX(90deg) rotateY(-360deg);
+  }
+}
+@keyframes terre3D {
+  0% {
+    transform: translateY(190px) rotateX(90deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateY(190px) rotateX(90deg) rotateY(-360deg);
+  }
+}
+@keyframes mars3D {
+  0% {
+    transform: translateY(250px) rotateX(90deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateY(250px) rotateX(90deg) rotateY(-360deg);
+  }
+}
+@keyframes jupiter3D {
+  0% {
+    transform: translateY(320px) rotateX(90deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateY(320px) rotateX(90deg) rotateY(-360deg);
+  }
+}
+@keyframes saturne3D {
+  0% {
+    transform: translateY(390px) rotateX(90deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateY(390px) rotateX(90deg) rotateY(-360deg);
+  }
+}
+@keyframes uranus3D {
+  0% {
+    transform: translateY(460px) rotateX(90deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateY(460px) rotateX(90deg) rotateY(-360deg);
   }
 }/*# sourceMappingURL=style.css.map */

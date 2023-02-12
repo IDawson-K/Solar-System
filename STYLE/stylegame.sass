@@ -1,0 +1,149 @@
+@use '../DAWSON/reset'
+@use '../DAWSON/color'
+@use '../DAWSON/flexbox'
+@use '../DAWSON/anim'
+@use '../DAWSON/spacing'
+@use '../DAWSON/position'
+@use '../DAWSON/classes'
+// @use '../DAWSON/Webkits'
+@use '../DAWSON/Fonts'
+
+body
+    overflow: hidden
+    background: rgb(13, 20, 56)
+
+.hitbox
+    position: relative
+    z-index: 3
+    width: 70px
+    height: 70px
+    margin: auto
+    margin-top: -285px
+
+.planet
+    margin: auto
+    transform: scale(0.4)
+    box-shadow: inset 0 0 70px 50px rgb(13, 20, 56)
+    height: 500px
+    width: 500px
+    border: 2px solid rgb(13, 20, 56)
+    border-radius: 50%
+    background: url(../IMG/PlanetAlphaSprite.png)
+    animation: sprite 10s steps(55) infinite
+
+@keyframes sprite
+    0%
+        background-position: 0px 0px
+    100%
+        background-position: -27500px 0px
+
+.ship
+    margin: auto
+    transform: scale(0.12)
+    height: 500px
+    width: 500px
+    border-radius: 50%
+    background: url(../IMG/vaisseausprite.png)
+    animation: sprite 10s steps(55) infinite
+    transition: 0.1s
+
+.code
+    transform: translate(-50%, -50%) scale(0)
+    opacity: 0
+    z-index: 2
+    border-radius: 2rem
+    box-shadow: 0 0 30px 3px cyan, inset 0 0 30px 3px cyan
+    border: 2px solid cyan
+    text-align: center
+    background: rgba(255, 255, 255, 0.1)
+    backdrop-filter: blur(10px)
+    position: absolute
+    padding: 1rem 4rem 2rem 4rem
+    color: cyan
+    line-height: 2
+    transition: 0.4s
+
+    span
+        font-size: 0.6rem
+
+.codepop
+    transform: translate(-50%, -50%) scale(1)
+    opacity: 1
+
+.ombre
+    transform: scale(1.2)
+    margin: auto
+    width: 500px
+    height: 500px
+    border-radius: 50%
+    box-shadow: inset 0 0 80px 190px black
+
+.contour
+    margin: auto
+    margin-top: 320px
+    transform: scale(0.8)
+    outline: 4000px black solid
+    border-radius: 50%
+    width: 510px
+    height: 510px
+
+.vif, .blabla
+    z-index: 5
+    border-radius: 2rem
+    box-shadow: 0 0 30px 3px cyan, inset 0 0 30px 3px cyan
+    border: 2px solid cyan
+    text-align: center
+    background: rgba(255, 255, 255, 0.1)
+    backdrop-filter: blur(6px)
+    padding: 2rem
+    color: cyan
+    line-height: 2
+    transition: 0.8s
+    transform: translate(-50%, -130%)
+    pointer-events: none
+
+.vif
+    transition-delay: 1s 
+    opacity: 0
+
+.vifpop
+    opacity: 1 !important
+
+.plurien
+    transition: 0.8s
+    opacity: 0 !important
+
+.ok1, .ok2
+    opacity: 0
+    z-index: 5
+    border-radius: 2rem
+    box-shadow: 0 0 30px 3px cyan, inset 0 0 10px 3px cyan
+    border: 2px solid cyan
+    text-align: center
+    background: rgba(255, 255, 255, 0.1)
+    backdrop-filter: blur(6px)
+    padding: 0.3rem 2rem 0.3rem 2rem
+    color: cyan
+    line-height: 2
+    cursor: pointer
+    transition: 0.4s
+    transform: translate(-50%, 150%)
+    &:hover
+        transform: translate(-50%, 150%) scale(1.2)
+
+.okdisparait
+    opacity: 0 !important
+    transform: translate(-50%, 150%) scale(0)
+    pointer-events: none
+
+#retour
+    transition: 1s
+    opacity: 0
+    pointer-events: none
+    transform: translate(-50%, 500%)
+    &:hover
+        transform: translate(-50%, 500%) scale(1.2)
+
+.retourpop
+    opacity: 1 !important
+    pointer-events: unset !important

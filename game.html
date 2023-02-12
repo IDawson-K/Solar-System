@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Dawson Kramer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="STYLE/stylegame.css">
+    <title>Solar System</title>
+</head>
+<body onkeydown="getKeyAndMove(event)">
+<!-- ─── Audio ───────────────────────────────────────────────────────────── -->
+<audio id="clicksound" src="AUDIO/button.mp3"></audio>
+
+<!-- ─── Explications Des Règles Du Jeu ──────────────────────────────────── -->
+<div id="vif" class="vif milieu">
+    Vous êtes dans l'espace, le soleil est derrière un astre proéminent, <span>il fait noir. Trouvez la planète Alpha, </span>
+    sur laquelle l'espèce humaine pourra vivre.
+</div>
+
+<div id="blabla" class="blabla milieu">
+    Vous êtes sur l'Eligius IV, le dernier vaisseau abritant la totalité de l'espèce humaine. Votre rôle est de trouver une nouvelle planète sur laquelle une nouvele ère débutera pour l'humanité.
+</div>
+
+<div onclick="bouton1()" id="ok1" class="ok1 milieu landing6 click">OK</div>
+
+<div onclick="bouton2()" id="ok2" class="ok2 milieu landing6 click">OK</div>
+
+<!-- ─── Message De Réussite ─────────────────────────────────────────────── -->
+    <div id="code" class="code milieu">
+        <br>
+        Felicitations, tu as trouvé la planète ! <br><br>
+        Voici un code trouvé : <br>
+        ⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️🅱️🅰️ <br>
+        <span>Peut-être faudra-t-il l'utiliser ?</span>
+        <br>
+    </div>
+
+    <div onclick="location.href = 'indexcode.html'" id="retour" class="ok2 milieu click">RETOUR</div>
+
+<!-- ─── Sprites ─────────────────────────────────────────────────────────── -->
+    <div id="planete" class="planet"></div>
+    <div id="hitbox" class="hitbox"></div>
+
+
+<!-- ─── Ombre Autour Du Vaisseau ────────────────────────────────────────── -->
+    <div id="contour" class="contour flexbox">
+        <div id="ombre" class="ombre flexbox">
+            <div id="vaisseau" class="ship"></div>
+        </div>
+    </div>
+
+    <script src="JS/game.js"></script>
+</body>
+</html>

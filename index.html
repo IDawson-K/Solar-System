@@ -40,7 +40,7 @@
 </div>
 
 <!-- ─── All ─────────────────────────────────────────────────────────────── -->
-<div class="all">
+<div id="all">
     <!-- ─── Trajectoire Des Astres ──────────────────────────────────────────── -->
     <div class="flexbox fs">
         <div class="cercle1 OnOff"></div>
@@ -95,6 +95,29 @@
     <div class="flexbox fs">
         <img onmouseover="uranusup()" onmouseleave="uranusdown()" onclick="uranus()" id="uranus" class="system planet click" src="IMG/uranus.png" alt="">
     </div>
+
+    <!-- ─── Systeme Solaire 3d ──────────────────────────────────────── -->
+    <div class="flexbox fs">
+        <img onmouseover="mercureup()" onmouseleave="mercuredown()" onclick="mercure()" id="mercure3D" class="system planet click" src="IMG/mercure.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="venusup()" onmouseleave="venusdown()" onclick="venus()" id="venus3D" class="system planet click" src="IMG/venus.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="terreup()" onmouseleave="terredown()" onclick="terre()" id="terre3D" class="system planet click" src="IMG/terre.png" alt="">
+    </div>
+    <div class="system flexbox fs">
+        <img onmouseover="marsup()" onmouseleave="marsdown()" onclick="mars()" id="mars3D" class="system planet click" src="IMG/mars.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="jupiterup()" onmouseleave="jupiterdown()" onclick="jupiter()" id="jupiter3D" class="system planet click" src="IMG/jupiter.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="saturneup()" onmouseleave="saturnedown()" onclick="saturne()" id="saturne3D" class="system planet click" src="IMG/saturne.png" alt="">
+    </div>
+    <div class="flexbox fs">
+        <img onmouseover="uranusup()" onmouseleave="uranusdown()" onclick="uranus()" id="uranus3D" class="system planet click" src="IMG/uranus.png" alt="">
+    </div>
 </div>
 
 <!-- ─── Nom Des astres ──────────────────────────────────────────────────── -->
@@ -123,14 +146,54 @@
     URANUS
 </div>
 
-<!-- ─── Fiches Descriptives Des Astres ──────────────────────────────────── -->
+<!-- ─── Fiche Descriptive Des Astres ──────────────────────────────────── -->
 <div class="fs bgnoir">
-    <div onclick="croix()" id="croix" class="m2">❌</div>
+    <div class="details">
+        <div onclick="croix()" id="croix" class="m2">❌</div>
+        <h2>THE EARTH</h2>
+        <video onmouseover="holoplay()" onmouseleave="holopause()" id="holo" loop src="VIDEO/terreholo.mp4"></video>
+        <div class="text mid">
+            La Terre, en 2030, il y a 200 ans.
+        </div>
+        <div class="text">
+            Depuis plus de deux siècles, la Terre est un désert inhospitalier et stérile. Les villes autrefois florissantes, les jungles luxuriantes et les vastes océans qui peuplaient la planète ont été remplacés par des déserts austères et sablonneux et des rochers froids et sans vie. La vie humaine s'est étiolée et ce qui reste est un rappel silencieux de nos erreurs passées.
+            <br><br>
+            L'atmosphère de la Terre n'est plus qu'une fine brume toxique, dépourvue d'oxygène et remplie de polluants mortels. Les rayons du soleil ne sont plus visibles, bloqués par l'épais brouillard, et la terre est stérile, avec peu de végétation. L'océan, autrefois source de vie et de subsistance, n'est plus qu'un cimetière de navires brisés et de villes englouties, dont les vestiges sont constamment battus par les vagues féroces d'une mer sauvage et indomptée.
+            <br><br>
+            L'air est rempli des cris des oiseaux et des animaux qui restent, les quelques créatures qui ont réussi à survivre aux dangers environnementaux. Le terrain est extrêmement dur et traître, avec des affleurements rocheux, des canyons profonds et des falaises dangereuses qui empêchent tous les explorateurs, même les plus robustes, de se frayer un chemin à travers le paysage.
+            <br><br>
+            La Terre n'est plus un lieu de vie, mais un monument à nos erreurs. La race humaine a été forcée d'aller de l'avant, de trouver un nouveau foyer parmi les étoiles, mais la Terre est toujours debout, un sombre rappel de ce que nous avions autrefois, et de ce que nous avons perdu.
+        </div>
+    </div>
 </div>
 
 <!-- ─── Bouton Rouge ────────────────────────────────────────────────────── -->
 <div onclick="explosion()" class="btnred flexbox">
     <img src="IMG/le-crane.png" alt="">
+</div>
+
+<!-- ─── Bouton 3d ───────────────────────────────────────────────────────── -->
+<?xml version="1.0" encoding="utf-8"?>
+<svg onclick="mode3D()" version="1.1" id="btn3D" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 39.2 21" style="enable-background:new 0 0 39.2 21;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3C3949;}
+	.st1{fill:#FFFFFF;}
+</style>
+<path id="fond" class="st0" d="M10.5,20.9h18.1c5.8,0,10.4-4.7,10.4-10.4v0c0-5.8-4.7-10.4-10.4-10.4H10.5C4.8,0.1,0.1,4.7,0.1,10.5
+	v0C0.1,16.2,4.8,20.9,10.5,20.9z"/>
+<path id="rond" class="st1" d="M10.4,3L10.4,3c4.1,0,7.5,3.4,7.5,7.5v0c0,4.1-3.4,7.5-7.5,7.5h0c-4.1,0-7.5-3.4-7.5-7.5v0
+	C2.9,6.3,6.3,3,10.4,3z"/>
+</svg>
+<div class="perspective">
+    <div class="cube flexbox">
+        <div class="face1"></div>
+        <div class="face2"></div>
+        <div class="face3"></div>
+        <div class="face4"></div>
+    </div>
+    <div class="dimension2">3D</div>
+    <div class="dimension3">2D</div>
 </div>
 
 <!-- ─── Compte À Rebours ────────────────────────────────────────────────── -->

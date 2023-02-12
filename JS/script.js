@@ -33,6 +33,16 @@ tag = document.querySelector('#tag');
 // Titre
 titre = document.querySelector('h1');
 
+// Systeme solaire
+asoleil = document.querySelector('#soleil');
+amercure = document.querySelector('#mercure');
+avenus = document.querySelector('#venus');
+aterre = document.querySelector('#terre');
+amars = document.querySelector('#mars');
+ajupiter = document.querySelector('#jupiter');
+asaturne = document.querySelector('#saturne');
+auranus = document.querySelector('#uranus');
+
 function begin() {
     start.classList.add('startDepop');
     hole.classList.add('overlayDepop');
@@ -42,48 +52,40 @@ function begin() {
     rocket.classList.add('fuseelaunch');
     tag.classList.add('depop');
     titre.classList.add('titreafter');
+    document.querySelector('.code').classList.add('codepop');
+}
+
+// 3D Mode
+function mode3D() {
+    document.querySelector('.cube').classList.toggle('cube3D');
+    document.querySelector('#all').classList.toggle('all3D');
+    document.querySelector('#rond').classList.toggle('switchbtn');
+    amercure.classList.toggle('depop');
+    avenus.classList.toggle('depop');
+    aterre.classList.toggle('depop');
+    amars.classList.toggle('depop');
+    ajupiter.classList.toggle('depop');
+    asaturne.classList.toggle('depop');
+    auranus.classList.toggle('depop');
 }
 
 // Information Display
-function soleil() {
-    document.querySelector('#soleil').classList.toggle('info');
-    document.querySelector('.bgnoir').classList.toggle('black');
-};
-
-function mercure() {
-    document.querySelector('#mercure').classList.toggle('info');
-    document.querySelector('.bgnoir').classList.toggle('black');
-};
-
-function venus() {
-    document.querySelector('#venus').classList.toggle('info');
-    document.querySelector('.bgnoir').classList.toggle('black');
-};
-
 function terre() {
+    document.querySelector('#all').classList.toggle('depop2');
     document.querySelector('#terre').classList.toggle('info');
     document.querySelector('.bgnoir').classList.toggle('black');
+    document.querySelector('#holo').play();
+    document.querySelector('#holo').playbackRate = 1.4;
+    document.querySelector('.details').classList.toggle('pop');
 };
 
-function mars() {
-    document.querySelector('#mars').classList.toggle('info');
-    document.querySelector('.bgnoir').classList.toggle('black');
-};
+function holoplay() {
+    document.querySelector('#holo').playbackRate = 0.7;
+}
 
-function jupiter() {
-    document.querySelector('#jupiter').classList.toggle('info');
-    document.querySelector('.bgnoir').classList.toggle('black');
-};
-
-function saturne() {
-    document.querySelector('#saturne').classList.toggle('info');
-    document.querySelector('.bgnoir').classList.toggle('black');
-};
-
-function uranus() {
-    document.querySelector('#uranus').classList.toggle('info');
-    document.querySelector('.bgnoir').classList.toggle('black');
-};
+function holopause() {
+    document.querySelector('#holo').playbackRate = 1.4;
+}
 
 // Hover on planets
 function soleilup() {
