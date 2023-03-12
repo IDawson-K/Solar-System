@@ -1,192 +1,291 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Dawson Kramer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="STYLE/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Dawson Kramer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="STYLE/style.css" />
     <title>Solar System</title>
-</head>
-<body>
-<!-- ─── Code ────────────────────────────────────────────────────────────── -->
-<div class="code">⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️🅱️🅰️</div>
+  </head>
+  <body>
+    <!-- ─── Code ────────────────────────────────────────────────────────────── -->
+    <div class="code">⬆️⬆️⬇️⬇️⬅️➡️⬅️➡️🅱️🅰️</div>
 
-<!-- ─── Overlay ─────────────────────────────────────────────────────────── -->
-<div id="overlay" class="overlay"></div>
+    <!-- ─── Overlay ─────────────────────────────────────────────────────────── -->
+    <div id="overlay" class="overlay"></div>
 
-<!-- ─── Video ───────────────────────────────────────────────────────────── -->
-<video id="bgvid" loop class="bg" src="VIDEO/bgvidspace2.mp4"></video>
+    <!-- ─── Video ───────────────────────────────────────────────────────────── -->
+    <video id="bgvid" loop class="bg" src="VIDEO/bgvidspace2.mp4"></video>
 
-<!-- ─── Big Bang ────────────────────────────────────────────────────────── -->
-<video id="bigbang" class="bg" src="VIDEO/bigbang.mp4"></video>
+    <!-- ─── Big Bang ────────────────────────────────────────────────────────── -->
+    <video id="bigbang" class="bg" src="VIDEO/bigbang.mp4"></video>
 
-<!-- ─── Audio ───────────────────────────────────────────────────────────── -->
-<audio id="music" loop src="AUDIO/yt5s.com - We Are All Astronauts - Ether (128 kbps).mp3"></audio>
-<audio id="clicksound" src="AUDIO/button.mp3"></audio>
-<audio id="alarm" src="AUDIO/alarm.mp3"></audio>
-<audio id="explosion" src="AUDIO/explosion.mp3"></audio>
+    <!-- ─── Canvas ──────────────────────────────────────────────────────────── -->
+    <canvas id="etoile" width="500" height="300"></canvas>
 
-<!-- ─── Ecran Titre ─────────────────────────────────────────────────────── -->
-<div class="flexbox titre">
-    <h1 class="landing">A TRIP TO THE SOLAR SYSTEM</h1>
-</div>
+    <!-- ─── Audio ───────────────────────────────────────────────────────────── -->
+    <audio
+      id="music"
+      loop
+      src="AUDIO/yt5s.com - We Are All Astronauts - Ether (128 kbps).mp3"
+    ></audio>
+    <audio id="clicksound" src="AUDIO/button.mp3"></audio>
+    <audio id="alarm" src="AUDIO/alarm.mp3"></audio>
+    <audio id="explosion" src="AUDIO/explosion.mp3"></audio>
 
-<button onclick="begin()" id="start" class="btn click">
-    start the journey
-</button>
+    <!-- ─── Ecran Titre ─────────────────────────────────────────────────────── -->
+    <div class="flexbox titre">
+      <h1 class="landing">A TRIP TO THE SOLAR SYSTEM</h1>
+    </div>
 
-<video loop id="rocket" class="fusee landing2" src="VIDEO/rocket.mp4"></video>
+    <button onclick="begin()" id="start" class="btn click">
+      start the journey
+    </button>
 
-<div id="tag" class="tag flexbox">
-    MADE BY DAWSON KRAMER
-</div>
+    <video
+      loop
+      id="rocket"
+      class="fusee landing2"
+      src="VIDEO/rocket.mp4"
+    ></video>
 
-<!-- ─── All ─────────────────────────────────────────────────────────────── -->
-<div id="all">
-    <!-- ─── Trajectoire Des Astres ──────────────────────────────────────────── -->
-    <div class="flexbox fs">
+    <div id="tag" class="tag flexbox">MADE BY DAWSON KRAMER</div>
+
+    <!-- ─── All ─────────────────────────────────────────────────────────────── -->
+    <div id="all">
+      <!-- ─── Trajectoire Des Astres ──────────────────────────────────────────── -->
+      <div class="flexbox fs">
         <div class="cercle1 OnOff"></div>
-    </div>
+      </div>
 
-    <div class="flexbox fs">
+      <div class="flexbox fs">
         <div class="cercle2 OnOff"></div>
-    </div>
+      </div>
 
-    <div class="flexbox fs">
+      <div class="flexbox fs">
         <div class="cercle3 OnOff"></div>
-    </div>
+      </div>
 
-    <div class="flexbox fs">
+      <div class="flexbox fs">
         <div class="cercle4 OnOff"></div>
-    </div>
+      </div>
 
-    <div class="flexbox fs">
+      <div class="flexbox fs">
         <div class="cercle5 OnOff"></div>
-    </div>
+      </div>
 
-    <div class="flexbox fs">
+      <div class="flexbox fs">
         <div class="cercle6 OnOff"></div>
-    </div>
+      </div>
 
-    <div class="flexbox fs">
+      <div class="flexbox fs">
         <div class="cercle7 OnOff"></div>
-    </div>
-    
-    <!-- ─── Systeme Solaire ─────────────────────────────────────────────────── -->
-    <div class="flexbox fs">
-        <img onmouseover="soleilup()" onmouseleave="soleildown()" onclick="soleil()" id="soleil" class="system click" src="IMG/soleil.png" alt="">
-    </div>
-    <div class="flexbox fs">
-        <img onmouseover="mercureup()" onmouseleave="mercuredown()" onclick="mercure()" id="mercure" class="system planet click" src="IMG/mercure.png" alt="">
-    </div>
-    <div class="flexbox fs">
-        <img onmouseover="venusup()" onmouseleave="venusdown()" onclick="venus()" id="venus" class="system planet click" src="IMG/venus.png" alt="">
-    </div>
-    <div class="flexbox fs">
-        <img onmouseover="terreup()" onmouseleave="terredown()" onclick="terre()" id="terre" class="system planet click" src="IMG/terre.png" alt="">
-    </div>
-    <div class="system flexbox fs">
-        <img onmouseover="marsup()" onmouseleave="marsdown()" onclick="mars()" id="mars" class="system planet click" src="IMG/mars.png" alt="">
-    </div>
-    <div class="flexbox fs">
-        <img onmouseover="jupiterup()" onmouseleave="jupiterdown()" onclick="jupiter()" id="jupiter" class="system planet click" src="IMG/jupiter.png" alt="">
-    </div>
-    <div class="flexbox fs">
-        <img onmouseover="saturneup()" onmouseleave="saturnedown()" onclick="saturne()" id="saturne" class="system planet click" src="IMG/saturne.png" alt="">
-    </div>
-    <div class="flexbox fs">
-        <img onmouseover="uranusup()" onmouseleave="uranusdown()" onclick="uranus()" id="uranus" class="system planet click" src="IMG/uranus.png" alt="">
-    </div>
-</div>
+      </div>
 
-<!-- ─── Nom Des astres ──────────────────────────────────────────────────── -->
-<div class="astre soleil">
-    THE SUN
-</div>
-<div class="astre mercure">
-    MERCURY
-</div>
-<div class="astre venus">
-    VENUS
-</div>
-<div class="astre terre">
-    EARTH
-</div>
-<div class="astre mars">
-    MARS
-</div>
-<div class="astre jupiter">
-    JUPITER
-</div>
-<div class="astre saturne">
-    SATURN
-</div>
-<div class="astre uranus">
-    URANUS
-</div>
+      <!-- ─── Systeme Solaire ─────────────────────────────────────────────────── -->
+      <div class="flexbox fs">
+        <img
+          onmouseover="soleilup()"
+          onmouseleave="soleildown()"
+          onclick="soleil()"
+          id="soleil"
+          class="system click"
+          src="IMG/soleil.png"
+          alt=""
+        />
+      </div>
+      <div class="flexbox fs">
+        <img
+          onmouseover="mercureup()"
+          onmouseleave="mercuredown()"
+          onclick="mercure()"
+          id="mercure"
+          class="system planet click"
+          src="IMG/mercure.png"
+          alt=""
+        />
+      </div>
+      <div class="flexbox fs">
+        <img
+          onmouseover="venusup()"
+          onmouseleave="venusdown()"
+          onclick="venus()"
+          id="venus"
+          class="system planet click"
+          src="IMG/venus.png"
+          alt=""
+        />
+      </div>
+      <div class="flexbox fs">
+        <img
+          onmouseover="terreup()"
+          onmouseleave="terredown()"
+          onclick="terre()"
+          id="terre"
+          class="system planet click"
+          src="IMG/terre.png"
+          alt=""
+        />
+      </div>
+      <div class="system flexbox fs">
+        <img
+          onmouseover="marsup()"
+          onmouseleave="marsdown()"
+          onclick="mars()"
+          id="mars"
+          class="system planet click"
+          src="IMG/mars.png"
+          alt=""
+        />
+      </div>
+      <div class="flexbox fs">
+        <img
+          onmouseover="jupiterup()"
+          onmouseleave="jupiterdown()"
+          onclick="jupiter()"
+          id="jupiter"
+          class="system planet click"
+          src="IMG/jupiter.png"
+          alt=""
+        />
+      </div>
+      <div class="flexbox fs">
+        <img
+          onmouseover="saturneup()"
+          onmouseleave="saturnedown()"
+          onclick="saturne()"
+          id="saturne"
+          class="system planet click"
+          src="IMG/saturne.png"
+          alt=""
+        />
+      </div>
+      <div class="flexbox fs">
+        <img
+          onmouseover="uranusup()"
+          onmouseleave="uranusdown()"
+          onclick="uranus()"
+          id="uranus"
+          class="system planet click"
+          src="IMG/uranus.png"
+          alt=""
+        />
+      </div>
+    </div>
 
-<!-- ─── Fiche Descriptive Des Astres ──────────────────────────────────── -->
-<div class="fs bgnoir">
-    <div class="details">
-        <div onclick="croix()" id="croix" class="m2">❌</div>
+    <!-- ─── Nom Des astres ──────────────────────────────────────────────────── -->
+    <div class="astre soleil">THE SUN</div>
+    <div class="astre mercure">MERCURY</div>
+    <div class="astre venus">VENUS</div>
+    <div class="astre terre">EARTH</div>
+    <div class="astre mars">MARS</div>
+    <div class="astre jupiter">JUPITER</div>
+    <div class="astre saturne">SATURN</div>
+    <div class="astre uranus">URANUS</div>
+
+    <!-- ─── Fiche Descriptive Des Astres ──────────────────────────────────── -->
+    <div class="fs bgnoir">
+      <div class="details">
         <h2>THE EARTH</h2>
-        <video onmouseover="holoplay()" onmouseleave="holopause()" id="holo" loop src="VIDEO/terreholo.mp4"></video>
-        <div class="text mid">
-            La Terre, en 2030, il y a 200 ans.
-        </div>
+        <video
+          onmouseover="holoplay()"
+          onmouseleave="holopause()"
+          id="holo"
+          loop
+          src="VIDEO/terreholo.mp4"
+        ></video>
+        <div class="text mid">La Terre, en 2030, il y a 200 ans.</div>
         <div class="text">
-            Depuis plus de deux siècles, la Terre est un désert inhospitalier et stérile. Les villes autrefois florissantes, les jungles luxuriantes et les vastes océans qui peuplaient la planète ont été remplacés par des déserts austères et sablonneux et des rochers froids et sans vie. La vie humaine s'est étiolée et ce qui reste est un rappel silencieux de nos erreurs passées.
-            <br><br>
-            L'atmosphère de la Terre n'est plus qu'une fine brume toxique, dépourvue d'oxygène et remplie de polluants mortels. Les rayons du soleil ne sont plus visibles, bloqués par l'épais brouillard, et la terre est stérile, avec peu de végétation. L'océan, autrefois source de vie et de subsistance, n'est plus qu'un cimetière de navires brisés et de villes englouties, dont les vestiges sont constamment battus par les vagues féroces d'une mer sauvage et indomptée.
-            <br><br>
-            L'air est rempli des cris des oiseaux et des animaux qui restent, les quelques créatures qui ont réussi à survivre aux dangers environnementaux. Le terrain est extrêmement dur et traître, avec des affleurements rocheux, des canyons profonds et des falaises dangereuses qui empêchent tous les explorateurs, même les plus robustes, de se frayer un chemin à travers le paysage.
-            <br><br>
-            La Terre n'est plus un lieu de vie, mais un monument à nos erreurs. La race humaine a été forcée d'aller de l'avant, de trouver un nouveau foyer parmi les étoiles, mais la Terre est toujours debout, un sombre rappel de ce que nous avions autrefois, et de ce que nous avons perdu.
+          Depuis plus de deux siècles, la Terre est un désert inhospitalier et
+          stérile. Les villes autrefois florissantes, les jungles luxuriantes et
+          les vastes océans qui peuplaient la planète ont été remplacés par des
+          déserts austères et sablonneux et des rochers froids et sans vie. La
+          vie humaine s'est étiolée et ce qui reste est un rappel silencieux de
+          nos erreurs passées.
+          <br /><br />
+          L'atmosphère de la Terre n'est plus qu'une fine brume toxique,
+          dépourvue d'oxygène et remplie de polluants mortels. Les rayons du
+          soleil ne sont plus visibles, bloqués par l'épais brouillard, et la
+          terre est stérile, avec peu de végétation. L'océan, autrefois source
+          de vie et de subsistance, n'est plus qu'un cimetière de navires brisés
+          et de villes englouties, dont les vestiges sont constamment battus par
+          les vagues féroces d'une mer sauvage et indomptée.
+          <br /><br />
+          L'air est rempli des cris des oiseaux et des animaux qui restent, les
+          quelques créatures qui ont réussi à survivre aux dangers
+          environnementaux. Le terrain est extrêmement dur et traître, avec des
+          affleurements rocheux, des canyons profonds et des falaises
+          dangereuses qui empêchent tous les explorateurs, même les plus
+          robustes, de se frayer un chemin à travers le paysage.
+          <br /><br />
+          La Terre n'est plus un lieu de vie, mais un monument à nos erreurs. La
+          race humaine a été forcée d'aller de l'avant, de trouver un nouveau
+          foyer parmi les étoiles, mais la Terre est toujours debout, un sombre
+          rappel de ce que nous avions autrefois, et de ce que nous avons perdu.
         </div>
+      </div>
     </div>
-</div>
 
-<!-- ─── Bouton Rouge ────────────────────────────────────────────────────── -->
-<div onclick="explosion()" class="btnred flexbox">
-    <img src="IMG/le-crane.png" alt="">
-</div>
+    <!-- ─── Bouton Rouge ────────────────────────────────────────────────────── -->
+    <div onclick="explosion()" class="btnred flexbox">
+      <img src="IMG/le-crane.png" alt="" />
+    </div>
 
-<!-- ─── Bouton 3d ───────────────────────────────────────────────────────── -->
-<?xml version="1.0" encoding="utf-8"?>
-<svg onclick="mode3D()" version="1.1" id="btn3D" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 39.2 21" style="enable-background:new 0 0 39.2 21;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#3C3949;}
-	.st1{fill:#FFFFFF;}
-</style>
-<path id="fond" class="st0" d="M10.5,20.9h18.1c5.8,0,10.4-4.7,10.4-10.4v0c0-5.8-4.7-10.4-10.4-10.4H10.5C4.8,0.1,0.1,4.7,0.1,10.5
-	v0C0.1,16.2,4.8,20.9,10.5,20.9z"/>
-<path id="rond" class="st1" d="M10.4,3L10.4,3c4.1,0,7.5,3.4,7.5,7.5v0c0,4.1-3.4,7.5-7.5,7.5h0c-4.1,0-7.5-3.4-7.5-7.5v0
-	C2.9,6.3,6.3,3,10.4,3z"/>
-</svg>
-<div class="perspective">
-    <div class="cube flexbox">
+    <!-- ─── Bouton 3d ───────────────────────────────────────────────────────── -->
+    <?xml version="1.0" encoding="utf-8"?>
+    <svg
+      onclick="mode3D()"
+      version="1.1"
+      id="btn3D"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 39.2 21"
+      style="enable-background: new 0 0 39.2 21"
+      xml:space="preserve"
+    >
+      <style type="text/css">
+        .st0 {
+          fill: #3c3949;
+        }
+        .st1 {
+          fill: #ffffff;
+        }
+      </style>
+      <path
+        id="fond"
+        class="st0"
+        d="M10.5,20.9h18.1c5.8,0,10.4-4.7,10.4-10.4v0c0-5.8-4.7-10.4-10.4-10.4H10.5C4.8,0.1,0.1,4.7,0.1,10.5
+	v0C0.1,16.2,4.8,20.9,10.5,20.9z"
+      />
+      <path
+        id="rond"
+        class="st1"
+        d="M10.4,3L10.4,3c4.1,0,7.5,3.4,7.5,7.5v0c0,4.1-3.4,7.5-7.5,7.5h0c-4.1,0-7.5-3.4-7.5-7.5v0
+	C2.9,6.3,6.3,3,10.4,3z"
+      />
+    </svg>
+    <div class="perspective">
+      <div class="cube flexbox">
         <div class="face1"></div>
         <div class="face2"></div>
         <div class="face3"></div>
         <div class="face4"></div>
+      </div>
+      <div class="dimension2">3D</div>
+      <div class="dimension3">2D</div>
     </div>
-    <div class="dimension2">3D</div>
-    <div class="dimension3">2D</div>
-</div>
 
-<!-- ─── Compte À Rebours ────────────────────────────────────────────────── -->
-<div class="destruct cache" id="destruct">SELF DESTRUCT IN :</div>
-<div class="time cache" id="kontarebour"></div>
+    <!-- ─── Compte À Rebours ────────────────────────────────────────────────── -->
+    <div class="destruct cache" id="destruct">SELF DESTRUCT IN :</div>
+    <div class="time cache" id="kontarebour"></div>
 
-<!-- ─── Alien ───────────────────────────────────────────────────────────── -->
-<div class="bulle">
-    Do you know the Konami Code ?
-</div>
-<img id="alien" class="alien" src="IMG/alien.png" alt="Alien">
+    <!-- ─── Alien ───────────────────────────────────────────────────────────── -->
+    <div class="bulle">Do you know the Konami Code ?</div>
+    <img id="alien" class="alien" src="IMG/alien.png" alt="Alien" />
 
-
-<script src="JS/script.js"></script>
-</body>
+    <script src="JS/script.js"></script>
+  </body>
 </html>

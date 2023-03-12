@@ -340,18 +340,39 @@ body {
   overflow: hidden;
 }
 
+canvas {
+  z-index: 2;
+  opacity: 0.4;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  filter: blur(8px);
+  pointer-events: none;
+  transition: 2s;
+  animation: etoile3 10s linear infinite;
+}
+
+.plula {
+  opacity: 0;
+}
+
 #all {
   transform-style: preserve-3d;
   transition: 1s;
   margin-top: 50vh;
 }
 
-#croix {
-  filter: saturate(0) brightness(9) sepia(5) hue-rotate(130deg);
-  position: absolute;
-  font-size: 2rem;
-  top: 0px;
-  left: 0px;
+.jeu {
+  text-decoration: none;
+  font-size: 0.9rem;
+  pointer-events: auto;
+  color: rgb(120, 131, 255);
+  transition: 0.3s, opacity 2s;
+  text-shadow: 0 0 6px #6c9bff;
+}
+.jeu:hover {
+  color: #c3beff;
+  text-shadow: 0 0 18px #a16eff;
 }
 
 .titre {
@@ -456,9 +477,9 @@ body {
   pointer-events: none;
 }
 .bgnoir h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: 30px;
-  margin-top: 7rem;
+  margin-top: 5rem;
   text-align: center;
   color: rgb(163, 253, 255);
   text-shadow: 0 0 10px cyan;
@@ -495,7 +516,7 @@ body {
   mix-blend-mode: lighten;
   border-radius: 50%;
   margin-top: 2rem;
-  width: 500px;
+  width: 400px;
   transition: opacity 2s, transform 2s;
   transform: scale(0.1);
   pointer-events: auto;
@@ -504,7 +525,7 @@ body {
 
 .black {
   opacity: 1;
-  background: rgb(1, 1, 1);
+  background: black;
 }
 
 .planet {
@@ -936,6 +957,10 @@ body {
   pointer-events: none;
 }
 
+.toutnoir {
+  filter: brightness(0);
+}
+
 .time {
   text-align: center;
   position: absolute;
@@ -1101,5 +1126,13 @@ body {
   }
   100% {
     transform: translateY(460px) rotateX(90deg) rotateY(-360deg);
+  }
+}
+@keyframes etoile3 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(6);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) scale(6);
   }
 }/*# sourceMappingURL=style.css.map */

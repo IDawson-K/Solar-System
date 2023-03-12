@@ -1,0 +1,61 @@
+BODY {
+  background: hsl(200, 70%, 11%);
+  background-size: 0.12em 100%;
+}
+
+.text--line {
+  font-size: 0.5em;
+}
+
+.svg {
+  z-index: 5;
+  pointer-events: none;
+  font-size: 16em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 3px;
+  opacity: 0;
+  transition: 2s;
+}
+.text-copy:nth-child(1) {
+  stroke: #360745;
+  stroke-dashoffset: 7%;
+}
+.text-copy:nth-child(2) {
+  stroke: #26b3ff;
+  stroke-dashoffset: 14%;
+}
+.text-copy:nth-child(3) {
+  stroke: #ff4385;
+  stroke-dashoffset: 21%;
+}
+.text-copy:nth-child(4) {
+  stroke: #c54ece;
+  stroke-dashoffset: 28%;
+}
+.text-copy:nth-child(5) {
+  stroke: #7878ff;
+  stroke-dashoffset: 35%;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+.animetoi {
+  opacity: 1 !important;
+  animation: stroke-offset 9s linear forwards;
+}
+
+.apparaitsvg {
+  opacity: 1 !important;
+}/*# sourceMappingURL=styleSVG.css.map */

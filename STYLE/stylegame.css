@@ -447,6 +447,9 @@ body {
   transition-delay: 1s;
   opacity: 0;
 }
+.vif span {
+  color: #ff5278;
+}
 
 .vifpop {
   opacity: 1 !important;
